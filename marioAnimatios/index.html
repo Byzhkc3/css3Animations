@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <title>超级马里奥</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <embed  src="./Tokyo Machine - Hype.mp3" autostart="true" loop='100' controls=playbutton></embed>
+    
     <div class="sky">
-    	<img src="./img/cloud.png" class="cloud">
-    	<img src="./img/cloud.png" class="cloud">
+        <img src="./img/cloud.png" class="cloud">
+        <img src="./img/cloud.png" class="cloud">
         <img src="./img/sun.png" class="cloud">
     </div>
     <div class="grass">
@@ -23,9 +23,10 @@
         <img src="./img/mario.png" class="mario">
         <img src="./img/luigi.png" class="luigi">
     </div>
-
+    <audio id="audio" src="./Tokyo Machine - Hype.mp3" style="opacity:0" preload="auto" loop hidden="true" />
     <script>
-        var mp3 = document.querySelector("embed");
-
+    window.onload = function(){
+        document.querySelector("audio").play();
+    }
     </script>
 </body>
