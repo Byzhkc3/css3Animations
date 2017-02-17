@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>购物车</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body class="basket">
+    <header>
+        <h1>购物车</h1>
+        <div class="basket-icon"><img src="img/basket.png"></div>
+    </header>
+    <ul class="products">
+        <li>
+            <img src="img/t-1.jpg">
+            <h2>绿色T恤</h2>
+            <button>添加到购物车</button>
+        </li>
+        <li>
+            <img src="img/t-2.jpg">
+            <h2>黄色T恤</h2>
+            <button>添加到购物车</button>
+        </li>
+        <li>
+            <img src="img/t-3.jpg">
+            <h2>粉色T恤</h2>
+            <button>添加到购物车</button>
+        </li>
+        <li>
+            <img src="img/t-1.jpg">
+            <h2>绿色T恤</h2>
+            <button>添加到购物车</button>
+        </li>
+        <li>
+            <img src="img/t-2.jpg">
+            <h2>黄色T恤</h2>
+            <button>添加到购物车</button>
+        </li>
+        <li>
+            <img src="img/t-3.jpg">
+            <h2>粉色T恤</h2>
+            <button>添加到购物车</button>
+        </li>
+    </ul>
+    <script>
+      $("button").on('click',function(){
+        $(this).closest('li')
+          .find('img')
+          .clone()
+          .addClass('zoom')
+          .appendTo('body');
+
+          setTimeout(function(){
+            $('.zoom').remove();
+          },1000);
+
+      });
+    </script>
+</body>
